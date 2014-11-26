@@ -1,0 +1,11 @@
+/bin/
+*.class
+*~
+*.idx
+data/
+./data
+.*
+data/index
+data/log
+data/simple
+*.tsv
