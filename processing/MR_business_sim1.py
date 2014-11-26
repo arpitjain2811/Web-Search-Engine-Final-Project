@@ -1,5 +1,4 @@
 from mrjob.job import MRJob
-from nltk.tokenize import word_tokenize
 import json
 import re
 
@@ -10,7 +9,6 @@ class MRBusinessSim1(MRJob):
     def mapper(self, _, line):
         obj = json.loads(line)
         words = {}
-#        tokenized = word_tokenize(line)
         for word in WORD_RE.findall(obj['text']):
             if word.lower() in words.keys():
                 words[word.lower()] += 1
