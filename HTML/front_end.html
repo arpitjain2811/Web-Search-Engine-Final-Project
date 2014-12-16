@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SAM !</title>
+
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="samstyle.css">
+
+    <script src="//code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="samscript.js"></script>
+
+</head>
+<body>
+
+<div class="navbar navbar-custom navbar-fixed-top">
+  <div class="navbar-header"><img id="logo" src="logo.png"></div>
+    <div class="navbar-collapse collapse">
+      <form class="navbar-form" name="search-form">
+        <div class="form-inline" >
+          <div class="input-inline">
+            <button name="qryType" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Business <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" >Business</a></li>
+                <li><a href="#" >Similar</a></li>
+                <li><a href="#" >Also Liked</a></li>
+              </ul>
+
+            <input name="name" class="form-control" type="text" id="autoQry" placeholder="Chipotle, library, iPhone repair..." >
+            <input name="loc" class="form-control" type="text" id="autoLoc" placeholder="Near...">
+            <button type="button" id="validateBtn" class="btn btn-success">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+
+<div id="googleMap"></div>
+<div class="container-fluid" id="main">
+  <div class="row">
+    <div class="col-xs-8" id="left">
+      <p id="demo"></p>
+      <div id="hello" style=" margin-right: 6%">
+    </div>
+    <table>
+        <tr>
+            <td>
+                <div id="here_table" style=" margin-left: 15%">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    </div>
+    <div class="col-xs-4"><!--map-canvas will be postioned here--></div>    
+  </div>
+</div>
+</body>
+</html>
+
